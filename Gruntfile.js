@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: "src/pug/html",
                     src: "**/*.pug",
-                    dest: "docs",
+                    dest: "/",
                     expand: true,
                     ext: ".html"
                 }]
@@ -27,13 +27,13 @@ module.exports = function (grunt) {
                     'src/vendor/jquery.inputmask.bundle.min.js',
                     'src/vendor/js.cookie.min.js'
                 ],
-                dest: 'docs/assets/js/libs.min.js'
+                dest: 'assets/js/libs.min.js'
             },
             css_libs: {
                 src: [
                     'src/css/normalize.min.css'
                 ],
-                dest: 'docs/assets/css/libs.min.css'
+                dest: 'assets/css/libs.min.css'
             },
             dist: {
                 options: {
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                     sourceMapIn: 'tmp/app.concat.js.map'
                 },
                 files: {
-                    'docs/assets/js/app.min.js': ['<%= concat.dist.dest %>']
+                    'assets/js/app.min.js': ['<%= concat.dist.dest %>']
                 }
             }
         },
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'docs/assets/css/app.min.css': 'tmp/app.css'
+                    'assets/css/app.min.css': 'tmp/app.css'
                 }
             }
         },
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
         svgmin: {
             dist: {
                 files: {
-                    'docs/assets/svg/sprite.svg': 'src/svg/sprite.svg'
+                    'assets/svg/sprite.svg': 'src/svg/sprite.svg'
                 }
             }
         }
