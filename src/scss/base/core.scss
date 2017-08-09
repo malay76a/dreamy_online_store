@@ -1,0 +1,30 @@
+//Fonts
+$font-family: sans-serif;
+$line-height: 1.3;
+
+//Colors
+$font-color: #333333;
+$brand-color: #ffcd00;
+$additional-color: #005ea8;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+  color: $font-color;
+}
+
+::selection {
+  background: $brand-color;
+}
+
+.is_no-transition {
+  transition: none !important;
+}

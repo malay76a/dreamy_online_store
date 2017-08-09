@@ -1,0 +1,9 @@
+$sprite-width: 960px;
+$sprite-height: 500px;
+
+%sprite-common {
+  background: url(../svg/sprite.png);
+  background-image: url(../svg/sprite.svg), none;
+  background-size: em($sprite-width) em($sprite-height);
+  background-repeat: no-repeat;
+}
